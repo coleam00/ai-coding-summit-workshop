@@ -1,0 +1,101 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"]
+  },
+  "overrides": [
+    {
+      "includes": ["src/APITester.tsx", "src/frontend.tsx", "src/index.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          },
+          "suspicious": {
+            "noAssignInExpressions": "off"
+          },
+          "correctness": {
+            "noUnusedFunctionParameters": "off"
+          }
+        }
+      }
+    }
+  ],
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "trailingCommas": "es5",
+      "semicolons": "always",
+      "arrowParentheses": "always",
+      "bracketSpacing": true,
+      "jsxQuoteStyle": "double"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "recommended": true
+      },
+      "complexity": {
+        "recommended": true,
+        "noExtraBooleanCast": "error",
+        "noUselessCatch": "error",
+        "noUselessConstructor": "error",
+        "noUselessLoneBlockStatements": "error",
+        "noUselessRename": "error",
+        "noVoid": "error",
+        "useLiteralKeys": "error",
+        "useOptionalChain": "error"
+      },
+      "correctness": {
+        "recommended": true,
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error"
+      },
+      "style": {
+        "recommended": true,
+        "noNegationElse": "error",
+        "noParameterAssign": "warn",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": "error",
+        "useExponentiationOperator": "error",
+        "useFragmentSyntax": "error",
+        "useShorthandAssign": "error",
+        "useSingleVarDeclarator": "error",
+        "useTemplate": "error"
+      },
+      "suspicious": {
+        "recommended": true,
+        "noArrayIndexKey": "warn",
+        "noConfusingVoidType": "error",
+        "noConsole": "off",
+        "noDuplicateObjectKeys": "error",
+        "noExplicitAny": "warn"
+      }
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}
