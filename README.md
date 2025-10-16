@@ -20,6 +20,7 @@ uv run python run_api.py
 **Terminal 2 - Frontend**:
 ```bash
 cd app/frontend
+npm install -g bun
 bun install
 bun dev
 # → http://localhost:3000
